@@ -1,0 +1,28 @@
+﻿<Window x:Class="RememberAll.Media"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RememberAll"
+        mc:Ignorable="d"
+        Title="Media" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <MediaElement Name="media"></MediaElement>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1">
+            <Button Height="30" Width="100" Margin="5" Name="BtnOpen" Click="BtnOpen_Click">Open</Button>
+            <Button Height="30" Width="100" Margin="5" Name="BtnPlay" Click="BtnPlay_Click">Play</Button>
+            <Button Height="30" Width="100" Margin="5" Name="BtnPause" Click="BtnPause_Click">Pause</Button>
+            <Button Height="30" Width="100" Margin="5" Name="BtnStop" Click="BtnStop_Click">Stop</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Name="TbTime"></TextBlock>
+        </StackPanel>
+        <Slider Grid.Row="3" Minimum="0" Maximum="10" ValueChanged="mediaSlider_ValueChanged" Name="mediaSlider"></Slider>
+    </Grid>
+</Window>
