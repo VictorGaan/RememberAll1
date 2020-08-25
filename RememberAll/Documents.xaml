@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RememberAll"
+        xmlns:local="clr-namespace:RememberAll" xmlns:properties="clr-namespace:RememberAll.Properties"
         mc:Ignorable="d"
         Title="Documents" Height="450" Width="800">
     <Grid>
@@ -17,6 +17,13 @@
         </Grid.ColumnDefinitions>
         <Menu Grid.ColumnSpan="2">
             <MenuItem Header="File">
+                <MenuItem Header="Dialogs">
+                    <MenuItem Header="Color" Name="MenuItemColor" Click="MenuItemColor_Click"></MenuItem>
+                    <MenuItem Header="Folder" Name="MenuItemFolder" Click="MenuItemFolder_Click"></MenuItem>
+                    <MenuItem Header="PrintDialog" Name="MenuItemPrint" Click="MenuItemPrint_Click"></MenuItem>
+                    <MenuItem Header="Read XML" Name="MenuItemRead" Click="MenuItemRead_Click"></MenuItem>
+                    <MenuItem Header="Write XML" Name="MenuItemWrite" Click="MenuItemWrite_Click"></MenuItem>
+                </MenuItem>
                 <MenuItem Header="Open"  Name="MenuItemOpen" Click="MenuItemOpen_Click"></MenuItem>
                 <MenuItem Header="Save">
                     <MenuItem Header="Excel" Name="MenuItemExcel" Click="MenuItemExcel_Click"></MenuItem>
@@ -36,7 +43,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <ListView x:Name="BagListView" AllowDrop="True" Grid.Row="1" Drop="BagListView_Drop" Grid.Column="1" Background="LightCyan">
+        <ListView x:Name="BagListView" AllowDrop="True" Grid.Row="1" Drop="BagListView_Drop" Grid.Column="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">

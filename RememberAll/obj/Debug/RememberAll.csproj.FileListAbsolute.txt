@@ -29,3 +29,5 @@ C:\Users\gaste\source\repos\RememberAll\RememberAll\obj\Debug\Documents.baml
 C:\Users\gaste\source\repos\RememberAll\RememberAll\obj\Debug\DragAndDrop.g.cs
 C:\Users\gaste\source\repos\RememberAll\RememberAll\obj\Debug\DragAndDrop.baml
 C:\Users\gaste\source\repos\RememberAll\RememberAll\obj\Debug\RememberAll.csproj.ResolveComReference.cache
+C:\Users\gaste\source\repos\RememberAll\RememberAll\obj\Debug\ChartWindow.g.cs
+C:\Users\gaste\source\repos\RememberAll\RememberAll\obj\Debug\ChartWindow.baml
