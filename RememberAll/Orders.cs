@@ -14,9 +14,27 @@ namespace RememberAll
     
     public partial class Orders
     {
-        public int ID { get; set; }
-        public int IDUser { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Orders()
+        {
+            this.OrderItems = new HashSet<OrderItems>();
+        }
     
-        public virtual Users Users { get; set; }
+        public long ID { get; set; }
+        public long TransactionTypeID { get; set; }
+        public Nullable<long> SupplierID { get; set; }
+        public Nullable<long> EmergencyMaintenancesID { get; set; }
+        public Nullable<long> SourceWarehouseID { get; set; }
+        public Nullable<long> DestinationWarehouseID { get; set; }
+        public System.DateTime Date { get; set; }
+        public Nullable<System.TimeSpan> Time { get; set; }
+    
+        public virtual EmergencyMaintenances EmergencyMaintenances { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderItems> OrderItems { get; set; }
+        public virtual Warehouses Warehouses { get; set; }
+        public virtual Warehouses Warehouses1 { get; set; }
+        public virtual Suppliers Suppliers { get; set; }
+        public virtual TransactionTypes TransactionTypes { get; set; }
     }
 }

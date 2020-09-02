@@ -25,7 +25,16 @@ namespace RememberAll
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Assets> Assets { get; set; }
+        public virtual DbSet<DepartmentLocations> DepartmentLocations { get; set; }
+        public virtual DbSet<Departments> Departments { get; set; }
+        public virtual DbSet<EmergencyMaintenances> EmergencyMaintenances { get; set; }
+        public virtual DbSet<Locations> Locations { get; set; }
+        public virtual DbSet<OrderItems> OrderItems { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Parts> Parts { get; set; }
+        public virtual DbSet<Suppliers> Suppliers { get; set; }
+        public virtual DbSet<TransactionTypes> TransactionTypes { get; set; }
+        public virtual DbSet<Warehouses> Warehouses { get; set; }
     }
 }

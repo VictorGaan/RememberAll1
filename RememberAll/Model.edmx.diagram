@@ -5,9 +5,28 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="51d86d0a88db4078af70d35f3914d280" Name="Diagram1">
-        <EntityTypeShape EntityType="RememberAllModel.Orders" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="RememberAllModel.Users" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="RememberAllModel.FK_Orders_Users" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RememberAllModel.Assets" Width="1.5" PointX="1.5" PointY="15.375" />
+        <EntityTypeShape EntityType="RememberAllModel.DepartmentLocations" Width="1.5" PointX="1.5" PointY="20.625" />
+        <EntityTypeShape EntityType="RememberAllModel.Departments" Width="1.5" PointX="1.5" PointY="26.25" />
+        <EntityTypeShape EntityType="RememberAllModel.EmergencyMaintenances" Width="1.5" PointX="0.75" PointY="10.25" />
+        <EntityTypeShape EntityType="RememberAllModel.Locations" Width="1.5" PointX="1.5" PointY="23.875" />
+        <EntityTypeShape EntityType="RememberAllModel.OrderItems" Width="1.5" PointX="5.25" PointY="1.5" />
+        <EntityTypeShape EntityType="RememberAllModel.Orders" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="RememberAllModel.Parts" Width="1.5" PointX="3" PointY="5.75" />
+        <EntityTypeShape EntityType="RememberAllModel.Suppliers" Width="1.5" PointX="0.75" PointY="7.5" />
+        <EntityTypeShape EntityType="RememberAllModel.TransactionTypes" Width="1.5" PointX="0.75" PointY="5.25" />
+        <EntityTypeShape EntityType="RememberAllModel.Warehouses" Width="1.5" PointX="0.75" PointY="2" />
+        <AssociationConnector Association="RememberAllModel.FK_Assets_DepartmentLocations" />
+        <AssociationConnector Association="RememberAllModel.FK_EmergencyMaintenances_Assets" />
+        <AssociationConnector Association="RememberAllModel.FK_DepartmentLocations_Departments" />
+        <AssociationConnector Association="RememberAllModel.FK_DepartmentLocations_Locations" />
+        <AssociationConnector Association="RememberAllModel.FK_Headers_EmergencyMaintenances" />
+        <AssociationConnector Association="RememberAllModel.FK_OrderItems_Orders" />
+        <AssociationConnector Association="RememberAllModel.FK_Transactions_Parts" />
+        <AssociationConnector Association="RememberAllModel.FK_Headers_Stocks" />
+        <AssociationConnector Association="RememberAllModel.FK_Headers_Stocks1" />
+        <AssociationConnector Association="RememberAllModel.FK_Headers_Suppliers" />
+        <AssociationConnector Association="RememberAllModel.FK_Headers_TransactionTypes" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

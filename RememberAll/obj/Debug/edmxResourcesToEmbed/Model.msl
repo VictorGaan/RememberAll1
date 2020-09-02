@@ -1,24 +1,121 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Хранилище RememberAllModelContainer" CdmEntityContainer="RememberAllEntities">
-    <EntitySetMapping Name="Orders">
-      <EntityTypeMapping TypeName="RememberAllModel.Orders">
-        <MappingFragment StoreEntitySet="Orders">
+    <EntitySetMapping Name="Assets">
+      <EntityTypeMapping TypeName="RememberAllModel.Assets">
+        <MappingFragment StoreEntitySet="Assets">
+          <ScalarProperty Name="WarrantyDate" ColumnName="WarrantyDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AssetGroupID" ColumnName="AssetGroupID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="DepartmentLocationID" ColumnName="DepartmentLocationID" />
+          <ScalarProperty Name="AssetName" ColumnName="AssetName" />
+          <ScalarProperty Name="AssetSN" ColumnName="AssetSN" />
           <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="RememberAllModel.Users">
-        <MappingFragment StoreEntitySet="Users">
+    <EntitySetMapping Name="DepartmentLocations">
+      <EntityTypeMapping TypeName="RememberAllModel.DepartmentLocations">
+        <MappingFragment StoreEntitySet="DepartmentLocations">
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="RememberAllModel.Departments">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmergencyMaintenances">
+      <EntityTypeMapping TypeName="RememberAllModel.EmergencyMaintenances">
+        <MappingFragment StoreEntitySet="EmergencyMaintenances">
+          <ScalarProperty Name="EMTechnicianNote" ColumnName="EMTechnicianNote" />
+          <ScalarProperty Name="EMEndDate" ColumnName="EMEndDate" />
+          <ScalarProperty Name="EMStartDate" ColumnName="EMStartDate" />
+          <ScalarProperty Name="EMRequestDate" ColumnName="EMRequestDate" />
+          <ScalarProperty Name="OtherConsiderations" ColumnName="OtherConsiderations" />
+          <ScalarProperty Name="DescriptionEmergency" ColumnName="DescriptionEmergency" />
+          <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
+          <ScalarProperty Name="AssetID" ColumnName="AssetID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="RememberAllModel.Locations">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItems">
+      <EntityTypeMapping TypeName="RememberAllModel.OrderItems">
+        <MappingFragment StoreEntitySet="OrderItems">
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="BatchNumber" ColumnName="BatchNumber" />
+          <ScalarProperty Name="PartID" ColumnName="PartID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="RememberAllModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DestinationWarehouseID" ColumnName="DestinationWarehouseID" />
+          <ScalarProperty Name="SourceWarehouseID" ColumnName="SourceWarehouseID" />
+          <ScalarProperty Name="EmergencyMaintenancesID" ColumnName="EmergencyMaintenancesID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="TransactionTypeID" ColumnName="TransactionTypeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parts">
+      <EntityTypeMapping TypeName="RememberAllModel.Parts">
+        <MappingFragment StoreEntitySet="Parts">
+          <ScalarProperty Name="MinimumQuantity" ColumnName="MinimumQuantity" />
+          <ScalarProperty Name="BatchNumberHasRequired" ColumnName="BatchNumberHasRequired" />
+          <ScalarProperty Name="EffectiveLife" ColumnName="EffectiveLife" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="RememberAllModel.Suppliers">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionTypes">
+      <EntityTypeMapping TypeName="RememberAllModel.TransactionTypes">
+        <MappingFragment StoreEntitySet="TransactionTypes">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouses">
+      <EntityTypeMapping TypeName="RememberAllModel.Warehouses">
+        <MappingFragment StoreEntitySet="Warehouses">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
